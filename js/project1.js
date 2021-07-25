@@ -24,7 +24,7 @@ function shownotes() {
     }
     localStorage.setItem('notes',JSON.stringify(notesobj));
 
-    var addnotes = document.getElementById('notes');
+   
     var html = '';
     notesobj.forEach((element,index) => {
         html += `
@@ -36,10 +36,11 @@ function shownotes() {
             <button class="btn btn-danger" class="del" id = "${index}" onclick= "deletenote(this.id);" >Delete</button>
         </div>
     </div> `;
+    var addnotes = document.getElementById('notes');
     if(notesobj.length != 0){
         addnotes.innerHTML = html;
     }else{
-        addnotes.innerHTML = '<h4>no notes added</h4>';
+        addnotes.innerHTML = "no notes added";
     }
     
     });
@@ -60,3 +61,17 @@ function deletenote(index) {
     localStorage.setItem('notes',JSON.stringify(notesobj));
     shownotes();
 }
+
+var search = document.getElementById('searchtxt');
+search.addEventListener('input',()=>{
+    var searchtxt = search.value;
+    var item = document.getElementsByClassName('card');
+    Array.from(item).forEach(element => {
+        var carditem = element.getElementsByTagName('p')[0].innerText;
+        if(carditem.includes(searchtxt)){
+            element.style.display = 'block';
+        }else{
+            element.style.display = 'none';
+        }
+    });
+})

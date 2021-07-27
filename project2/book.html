@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./project.css">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Book library</title>
+</head>
+
+<body>
+
+  <!-- header -->
+  <div id="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Book library</a>
+      </div>
+    </nav>
+    <!-- alert div-->
+    <div id="alert"></div>
+
+
+    <!-- form element -->
+    <form id="formsubmit">
+      <div class="row mb-3">
+        <label for="bookname" class="col-sm-2 col-form-label" id="in">name</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="bookname" placeholder="name of the book">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="author" class="col-sm-2 col-form-label" id="in">Author</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="author" placeholder="author of the book">
+        </div>
+      </div>
+      <div class="row mb-3">
+        <label for="price" class="col-sm-2 col-form-label" id="in">price</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="price" placeholder="xyz$">
+        </div>
+      </div>
+      <fieldset class="row mb-3" id="subject">
+        <legend class="col-form-label col-sm-2 pt-0">subjects :</legend>
+        <hr>
+
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="book" id="phy" value="physics" checked>
+            <label class="form-check-label" for="physics">
+              physics
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="book" id="chemistry" value="chemistry" >
+            <label class="form-check-label" for="chemistry">
+              chemistry
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="book" id="maths" value="maths">
+            <label class="form-check-label" for="maths">
+              maths
+            </label>
+          </div>
+        </div>
+      </fieldset>
+
+      <button type="submit" class="btn btn-primary">add book</button>
+    </form>
+
+    <!-- table element -->
+    <table class="table table-hover container my-3" id="table">
+      <thead>
+        <tr>
+
+          <th scope="col">Name</th>
+          <th scope="col">Author</th>
+          <th scope="col">type</th>
+          <th scope="col">price(₹)</th>
+        </tr>
+      </thead>
+      <tbody id="addlist">
+
+
+      </tbody>
+    </table>
+
+    <center id="del">
+      <button type="button" class="btn btn-danger" id="btn">Delete</button>
+    </center>
+  </div>
+
+
+
+
+</body>
+<script src="js/project.js"></script>
+
+</html>

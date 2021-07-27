@@ -1,0 +1,23 @@
+
+#container{
+    padding-left: 10%;
+    padding-top: 3%;
+
+}
+h3{
+    padding-bottom: 3%;
+}
+#text{
+    width: 80%;
+    font-size: larger;
+    
+}
+#notes{
+    padding-top: 40px;
+}
+#add{
+    margin-top: 2%;
+}
+#card{
+    margin: 2%;
+ }

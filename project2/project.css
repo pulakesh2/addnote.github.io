@@ -1,0 +1,27 @@
+#formsubmit{
+    padding-left: 12%;
+    margin-top: 3%;
+    width: 60%;
+}
+#table{
+    width: 80%;
+}
+@media(max-width: 440px){
+ 
+    #formsubmit{
+        padding-left: 5%;
+        margin-top: 3%;
+        width: 80%;
+    }
+  .col-sm-10{
+      float: right;
+      padding:0px;
+      width: 60%;
+  }
+  #in{
+      width:40%;
+  }
+  #subject{
+      padding-left: 4%;
+  }
+}

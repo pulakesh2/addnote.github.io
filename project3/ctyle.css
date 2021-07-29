@@ -1,0 +1,11 @@
+#app{
+   padding-left: 46%;
+}
+#back{
+    background-color: rgb(240, 240, 240);
+}
+@media (max-width:450px){
+    #app{
+        padding-left: 36%;
+     }
+}
